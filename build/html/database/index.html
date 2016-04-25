@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>数据库说明 &mdash; 小圈子(SmallCircle) 1.0.0 中文手册|用户手册|用户指南|中文文档</title>
+  
+
+  
+  
+  <link rel="shortcut icon" href="../_static/ci-icon.ico" />
+  
+
+  
+  <link href="../_static/css/fonts.css" rel="stylesheet" type="text/css" />
+
+  
+  
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme_cn.css" type="text/css" />
+    <link rel="top" title="小圈子(SmallCircle) 1.0.0 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
+        <link rel="next" title="管理员表" href="admin.html"/>
+        <link rel="prev" title="服务器端说明" href="../server/index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.2.6.2.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div id="nav">
+  <div id="nav_inner">
+    
+    
+    
+      <div id="pulldown-menu" class="ciNav">
+        <ul>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 SmallCircle</a><ul class="simple">
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation/downloads.html">演示应用安装</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/index.html">安装说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/server.html">服务器端说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/app.html">APP端说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/troubleshooting.html">疑难解答</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html">SmallCircle 概览</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../overview/getting_started.html">开始</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/at_a_glance.html">SmallCircle 是什么？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/features.html">支持特性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/appflow.html">应用程序流程图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/mvc.html">模型 - 视图 - 控制器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/goals.html">架构目标</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/index.html">使用教程</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/static_pages.html">加载静态内容</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/news_section.html">读取新闻条目</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/create_news_items.html">创建新闻条目</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/conclusion.html">结束语</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">问题反馈</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../documentation/index.html">编写 SmallCircle 的文档</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer's Certificate of Origin 1.1</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../general/index.html">常见问题</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../general/credits.html">关于 SmallCircle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/errors.html">错误处理</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">接口说明</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/chat.html">消息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/config.html">接口配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/contact.html">通讯录</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/friend_circle.html">朋友圈</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/group_chat.html">群聊</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/security.html">接口安全</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/user.html">用户</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">数据库说明</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="admin.html">管理员表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin_role.html">管理员角色表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin_role_priv.html">管理员权限表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="friend.html">朋友圈表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="friend_reply.html">朋友圈回复表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="friend_user.html">朋友圈用户表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meeting.html">会议表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meeting_user.html">会议用户表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="message.html">私聊信息表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="session.html">群聊信息表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="session_user.html">群聊用户表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user.html">用户表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_code.html">用户验证码表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_favorite.html">用户收藏表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_feedback.html">用户回复表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_friend.html">用户朋友表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_push.html">用户推送表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="area.html">地区表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blacklist.html">黑名单表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="menu.html">菜单表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module.html">模块表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notice.html">通知表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="times.html">次数表</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">服务器端说明</a><ul class="simple">
+</ul>
+</li>
+</ul>
+
+      </div>
+    
+      
+  </div>
+</div>
+<div id="nav2">
+  <a href="#" id="openToc">
+    <img src="data:image/jpg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAICAgICAgICAgICAgICAgMCAgICAwMDAwMDAwMEAwMDAwMDBAQEBAUEBAQFBQYGBQUHBwcHBwcHBwcHBwcHBwf/2wBDAQICAgMDAwUEBAUHBgUGBwgICAgICAgHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwf/wAARCAArAJoDAREAAhEBAxEB/8QAHgABAAAGAwEAAAAAAAAAAAAAAAQFBgcICQECAwr/xAA/EAAABAQCBgcFBAsBAAAAAAACAwQFAAEGBxESExZRU5XVCBQZIlWi0gkVITFCIzJSchgzQUNUVmFiZYWy1P/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDCEXygIE47JKAmEAgEAgEAgEAgEAgEAgEAgEBBnGBCcEH9kBEAnjAekBusU9DWxoACnKgx8ZqLmMBaWquivZhvLMmXRYy8v+XfRf8AS+A1WwCAQCAQGdrZby3DbbG0T0bRllHB4q2kVb0+r7nV5U1PLz1Jb+4oQCSoW96RJ9AEhOWHMAqXekLHGeMBQHSCoei6doG0FTUxTlDMLpVTpWaN9Mt5UbxUjOpLZxsoW+QFTs4OGQwrrZ2eRYg/e72OAcAxRgL79Hy3Rtwq1EnU0Y51hTrciNMfAoUlQKikYjijOomKJU2ES2WkNLmEEpYSn8Zz+AZwGdrf0V7fuZqhEK0TylGY1uI0xxbddJIKSopvPOSSCodpBRhmI8AA4HTwFjl+c5QGrN/p98pV4XU/UjUuZHtsMCS4NTkUIhSnGIATQhNKHgIM5gEEXx/ZOAk8AgEAgMwujjZygLjMDg51XT/vZanqE9uJO685pcqctKlNADIiVEA++aL6YDNZq6HlkDygzFQoxf7moP8A3wE7/QysZ/IY+M1FzKAzzWtJehF3YDHe4DNiSdkD9AoD5j9aFm/8ofTANaFm/wDKH0wDWhZv/KH0wDWhZv8Ayh9MA1oWb/yh9MBsYJujb8VobCIFlyujsgeGu3y1M8tdxqPfawdkZ46pdzgFDPp9ndC0IZkjAOSc8ZZve0uTIYAQgtz0l7j0s62nsI30rWtrqmXtb3cI16T2taVbCiRAVmU91GalidUaFcmEfoTsDDEwQnZBTLEOQZ4BhbrQs3/lD6YC+Vh7g0vS9VDqer6nPRSbtCiR0sVTDNUJNSFOGkTLkC4x/UJWxuSyLyyOPNmIcgDnMoOYOaQZtvV+LEW/bbdW4emWnzimtFUL5T1Y0q6Uxc9bb55dHw6adaZ1AsinXctWQACkxFIOZJMJcwBEMJQoDWtWFQJk1U1AQxVSGrGgDqo6hUoGwTQFyKmZMUlgWw4OdJI3HGRQviGXwwl8oCm9aFm/8ofTANaFm/8AKH0wDWhZv/KH0wHOtCz+I2/MIMP6fTjjAba/Z9SMe7eVAsOFpNHXytPmy/hamsf0fmgNtzA0l6EPd+iAqn3SVsgJ6eXIYBSywFq6oZOtFmSwgPn3e/ZrX1b3BcS21ZbdwbCVh4W1YqUvaNUelCaLqxylGU1qgJjRg7wiwnmhCLuaUf34Cmx+z0v4GeHvy2nEHrk0B17Pa/vjluOIPfJoB2e1+vG7b8Qe+TwDs9r++OW44g98mgHZ7X98ctxxB75NAOz2v745bjiD3yaAdntfrxu2/EHvk8A7Pa/Xjdt+IPfJ4B2e1+vG7b8Qe+TwDs9r9eN234g98ngHZ7X68btvxB75PAOz2v143bfiD3yeAdntf3xy3HEHvk0BHEezo6QKmeAKgtiH8zk+8kgNrHQv6OlSWHtyqpurXZqeH52qpdUqwTIFQJCkCclSt5KYlSqCQcp+xRhPEIRBXeN0WQeTTDDYU2JpFlBllgJ1hL8MAnLNKAlalFI6QsQwFLqqaLOmLEuAlI6MInP9TAeepabcwDUtNuYBqWm3MA1LTbmAalptzANS025gGpabcwDUtNuYBqWm3MA1LTbmAalptzANTCJfuYCOIpQkuYfs4CpkbSAjLgGAnxQMksID2gEB1FAJylsgOcJbJQDCWyUAwlslAMJbJQDCWyUAwlslAMJbJQDCWyUAwlslAMJbJQDCWyUAwlslAMJbJQDCWyUBzAIBAf/Z" title="切换目录" alt="切换目录" />
+  </a>
+</div>
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../index.html" class="fa fa-home"> SmallCircle</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索手册" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 SmallCircle</a><ul class="simple">
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation/downloads.html">演示应用安装</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/index.html">安装说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/server.html">服务器端说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/app.html">APP端说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/troubleshooting.html">疑难解答</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html">SmallCircle 概览</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../overview/getting_started.html">开始</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/at_a_glance.html">SmallCircle 是什么？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/features.html">支持特性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/appflow.html">应用程序流程图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/mvc.html">模型 - 视图 - 控制器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/goals.html">架构目标</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/index.html">使用教程</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/static_pages.html">加载静态内容</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/news_section.html">读取新闻条目</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/create_news_items.html">创建新闻条目</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/conclusion.html">结束语</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">问题反馈</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../documentation/index.html">编写 SmallCircle 的文档</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer's Certificate of Origin 1.1</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../general/index.html">常见问题</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../general/credits.html">关于 SmallCircle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/errors.html">错误处理</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">接口说明</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/chat.html">消息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/config.html">接口配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/contact.html">通讯录</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/friend_circle.html">朋友圈</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/group_chat.html">群聊</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/security.html">接口安全</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/user.html">用户</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">数据库说明</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="admin.html">管理员表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin_role.html">管理员角色表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin_role_priv.html">管理员权限表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="friend.html">朋友圈表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="friend_reply.html">朋友圈回复表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="friend_user.html">朋友圈用户表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meeting.html">会议表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meeting_user.html">会议用户表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="message.html">私聊信息表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="session.html">群聊信息表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="session_user.html">群聊用户表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user.html">用户表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_code.html">用户验证码表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_favorite.html">用户收藏表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_feedback.html">用户回复表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_friend.html">用户朋友表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_push.html">用户推送表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="area.html">地区表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blacklist.html">黑名单表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="menu.html">菜单表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module.html">模块表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notice.html">通知表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="times.html">次数表</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">服务器端说明</a><ul class="simple">
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">SmallCircle</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">首页</a> &raquo; </li>
+    
+    <li>数据库说明</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+    <div style="float:right;">
+      <div style="text-decoration:underline;color:blue;margin-left:5px;cursor:pointer;" id="closeMe">
+        <img title="目录" alt="toc" src="data:image/gif;base64,R0lGODlhFAAUAJEAAAAAADMzM////wAAACH5BAUUAAIALAAAAAAUABQAAAImlI+py+0PU5gRBRDM3DxbWoXis42X13USOLauUIqnlsaH/eY6UwAAOw==" />
+      </div>
+    </div>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="id1">
+<h1>数据库说明<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>ZeroSystem 内置了一个快速强大的数据库抽象类，支持传统的查询架构以及查询构造器模式。
+数据库方法的语法简单明了。</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="admin.html">管理员表</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="admin_role.html">管理员角色表</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="admin_role_priv.html">管理员权限表</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="friend.html">朋友圈表</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="friend_reply.html">朋友圈回复表</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="friend_user.html">朋友圈用户表</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="meeting.html">会议表</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="meeting_user.html">会议用户表</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="message.html">私聊信息表</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="session.html">群聊信息表</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="session_user.html">群聊用户表</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user.html">用户表</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user_code.html">用户验证码表</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user_favorite.html">用户收藏表</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user_feedback.html">用户回复表</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user_friend.html">用户朋友表</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user_push.html">用户推送表</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="area.html">地区表</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="blacklist.html">黑名单表</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="menu.html">菜单表</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="module.html">模块表</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="notice.html">通知表</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="times.html">次数表</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="admin.html" class="btn btn-neutral float-right" title="管理员表">下一个主题 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../server/index.html" class="btn btn-neutral" title="服务器端说明"><span class="fa fa-arrow-circle-left"></span> 上一个主题</a>
+      
+    </div>
+  
+
+  
+  <div id="notes">
+  
+  <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="userguide3/database/index" data-title="数据库说明" data-url="http://smallcircle.org.cn/user_guide/database/index.html"></div>
+  <!-- 多说评论框 end -->
+  
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"smallcircle"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+  <!-- 多说公共JS代码 end -->
+  </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 2014 - 2015, 无穷大软件.
+       最后修改: 2016-04-25.
+    </p>
+  </div>
+
+  
+    <p>
+        <a href="https://github.com/SmallCircle-Chinese/smallcircle-user-guide" target="_blank">Github 简体中文翻译</a>
+        ·
+        <a href="http://smallcircle-chinese.github.io/smallcircle-user-guide/smallcircle_user_guide.zip">离线版压缩包下载</a>
+        ·
+        <a href="http://smallcircle-chinese.github.io/smallcircle-user-guide/SmallCircle.pdf">PDF 版下载</a>
+    </p>
+  
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'3.0.2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+  
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-272152-3', 'auto');
+        ga('send', 'pageview');
+    </script>
+  
+
+</body>
+</html>

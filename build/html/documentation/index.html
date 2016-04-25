@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>编写 SmallCircle 的文档 &mdash; 小圈子(SmallCircle) 1.0.0 中文手册|用户手册|用户指南|中文文档</title>
+  
+
+  
+  
+  <link rel="shortcut icon" href="../_static/ci-icon.ico" />
+  
+
+  
+  <link href="../_static/css/fonts.css" rel="stylesheet" type="text/css" />
+
+  
+  
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme_cn.css" type="text/css" />
+    <link rel="top" title="小圈子(SmallCircle) 1.0.0 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
+        <link rel="up" title="问题反馈" href="../contributing/index.html"/>
+        <link rel="next" title="Developer&#39;s Certificate of Origin 1.1" href="../DCO.html"/>
+        <link rel="prev" title="问题反馈" href="../contributing/index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.2.6.2.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div id="nav">
+  <div id="nav_inner">
+    
+    
+    
+      <div id="pulldown-menu" class="ciNav">
+        <ul>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 SmallCircle</a><ul class="simple">
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation/downloads.html">演示应用安装</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/index.html">安装说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/server.html">服务器端说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/app.html">APP端说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/troubleshooting.html">疑难解答</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html">SmallCircle 概览</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../overview/getting_started.html">开始</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/at_a_glance.html">SmallCircle 是什么？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/features.html">支持特性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/appflow.html">应用程序流程图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/mvc.html">模型 - 视图 - 控制器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/goals.html">架构目标</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/index.html">使用教程</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/static_pages.html">加载静态内容</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/news_section.html">读取新闻条目</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/create_news_items.html">创建新闻条目</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/conclusion.html">结束语</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../contributing/index.html">问题反馈</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">编写 SmallCircle 的文档</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer's Certificate of Origin 1.1</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../general/index.html">常见问题</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../general/urls.html">SmallCircle URL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/controllers.html">控制器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/reserved_names.html">保留名称</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/views.html">视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/models.html">模型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/helpers.html">辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/libraries.html">使用 SmallCircle 类库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/creating_libraries.html">创建类库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/drivers.html">使用 SmallCircle 驱动器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/creating_drivers.html">创建驱动器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/core_classes.html">创建核心系统类</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/ancillary_classes.html">创建附属类</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/hooks.html">钩子 - 扩展框架核心</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/autoloader.html">自动加载资源</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/common_functions.html">公共函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/compatibility_functions.html">兼容性函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/routing.html">URI 路由</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/errors.html">错误处理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/caching.html">网页缓存</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/profiling.html">程序分析</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/cli.html">以 CLI 方式运行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/managing_apps.html">管理你的应用程序</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/environments.html">处理多环境</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/alternative_php.html">在视图文件中使用 PHP 替代语法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/security.html">安全</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/styleguide.html">PHP 开发规范</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">接口说明</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/chat.html">消息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/config.html">接口配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/contact.html">通讯录</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/friend_circle.html">朋友圈</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/group_chat.html">群聊</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/security.html">接口安全</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/user.html">用户</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../database/index.html">数据库说明</a><ul class="simple">
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">服务器端说明</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../server/array_helper.html">数组辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/captcha_helper.html">验证码辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/cookie_helper.html">Cookie 辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/date_helper.html">日期辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/directory_helper.html">目录辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/download_helper.html">下载辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/email_helper.html">邮件辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/file_helper.html">文件辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/form_helper.html">表单辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/html_helper.html">HTML 辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/inflector_helper.html">Inflector 辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/language_helper.html">语言辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/number_helper.html">数字辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/path_helper.html">路径辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/security_helper.html">安全辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/smiley_helper.html">表情辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/string_helper.html">字符串辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/text_helper.html">文本辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/typography_helper.html">排版辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/url_helper.html">URL 辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/xml_helper.html">XML 辅助函数</a></li>
+</ul>
+</li>
+</ul>
+
+      </div>
+    
+      
+  </div>
+</div>
+<div id="nav2">
+  <a href="#" id="openToc">
+    <img src="data:image/jpg;base64,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" title="切换目录" alt="切换目录" />
+  </a>
+</div>
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../index.html" class="fa fa-home"> SmallCircle</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索手册" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 SmallCircle</a><ul class="simple">
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation/downloads.html">演示应用安装</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/index.html">安装说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/server.html">服务器端说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/app.html">APP端说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/troubleshooting.html">疑难解答</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html">SmallCircle 概览</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../overview/getting_started.html">开始</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/at_a_glance.html">SmallCircle 是什么？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/features.html">支持特性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/appflow.html">应用程序流程图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/mvc.html">模型 - 视图 - 控制器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/goals.html">架构目标</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/index.html">使用教程</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/static_pages.html">加载静态内容</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/news_section.html">读取新闻条目</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/create_news_items.html">创建新闻条目</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/conclusion.html">结束语</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../contributing/index.html">问题反馈</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">编写 SmallCircle 的文档</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer's Certificate of Origin 1.1</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../general/index.html">常见问题</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../general/urls.html">SmallCircle URL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/controllers.html">控制器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/reserved_names.html">保留名称</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/views.html">视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/models.html">模型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/helpers.html">辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/libraries.html">使用 SmallCircle 类库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/creating_libraries.html">创建类库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/drivers.html">使用 SmallCircle 驱动器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/creating_drivers.html">创建驱动器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/core_classes.html">创建核心系统类</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/ancillary_classes.html">创建附属类</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/hooks.html">钩子 - 扩展框架核心</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/autoloader.html">自动加载资源</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/common_functions.html">公共函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/compatibility_functions.html">兼容性函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/routing.html">URI 路由</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/errors.html">错误处理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/caching.html">网页缓存</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/profiling.html">程序分析</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/cli.html">以 CLI 方式运行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/managing_apps.html">管理你的应用程序</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/environments.html">处理多环境</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/alternative_php.html">在视图文件中使用 PHP 替代语法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/security.html">安全</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/styleguide.html">PHP 开发规范</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">接口说明</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/chat.html">消息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/config.html">接口配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/contact.html">通讯录</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/friend_circle.html">朋友圈</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/group_chat.html">群聊</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/security.html">接口安全</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/user.html">用户</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../database/index.html">数据库说明</a><ul class="simple">
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">服务器端说明</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../server/array_helper.html">数组辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/captcha_helper.html">验证码辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/cookie_helper.html">Cookie 辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/date_helper.html">日期辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/directory_helper.html">目录辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/download_helper.html">下载辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/email_helper.html">邮件辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/file_helper.html">文件辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/form_helper.html">表单辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/html_helper.html">HTML 辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/inflector_helper.html">Inflector 辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/language_helper.html">语言辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/number_helper.html">数字辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/path_helper.html">路径辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/security_helper.html">安全辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/smiley_helper.html">表情辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/string_helper.html">字符串辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/text_helper.html">文本辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/typography_helper.html">排版辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/url_helper.html">URL 辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server/xml_helper.html">XML 辅助函数</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">SmallCircle</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">首页</a> &raquo; </li>
+    
+    <li><a href="../contributing/index.html">问题反馈</a> &raquo; </li>
+    
+    <li>编写 SmallCircle 的文档</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+    <div style="float:right;">
+      <div style="text-decoration:underline;color:blue;margin-left:5px;cursor:pointer;" id="closeMe">
+        <img title="目录" alt="toc" src="data:image/gif;base64,R0lGODlhFAAUAJEAAAAAADMzM////wAAACH5BAUUAAIALAAAAAAUABQAAAImlI+py+0PU5gRBRDM3DxbWoXis42X13USOLauUIqnlsaH/eY6UwAAOw==" />
+      </div>
+    </div>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="smallcircle">
+<h1>编写 SmallCircle 的文档<a class="headerlink" href="#smallcircle" title="永久链接至标题">¶</a></h1>
+<p>SmallCircle 使用 Sphinx 来生成多种不同格式的文档，并采用 reStructuredText 语法来编写。
+如果你熟悉 Markdown 或 Textile ，你会很快上手 reStructuredText 。我们的目标是可读性
+以及对用户的友好性，尽管是非常技术性的文档，但读它的永远是人类！</p>
+<p>每一页都应该包含该页的一个目录，就像下面这样。它是通过下面的代码自动创建的：</p>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="nx">contents</span><span class="o">::</span>
+    <span class="o">:</span><span class="nx">local</span><span class="o">:</span>
+
+<span class="o">..</span> <span class="nx">raw</span><span class="o">::</span> <span class="na">html</span>
+
+<span class="o">&lt;</span><span class="nx">div</span> <span class="nx">class</span><span class="o">=</span><span class="s2">&quot;custom-index container&quot;</span><span class="o">&gt;&lt;/</span><span class="nx">div</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#id1" id="id4">所需工具</a></li>
+<li><a class="reference internal" href="#id2" id="id5">页面标题、小节标题 和 子标题</a></li>
+<li><a class="reference internal" href="#id3" id="id6">为方法编写文档</a></li>
+</ul>
+</div>
+<div class="custom-index container"></div><p>其中的 &lt;div&gt; 标签采用了原始的 HTML 语法，它是文档中的一个占位符，用于 JavaScript
+动态的添加当前页面上的任何方法和函数。</p>
+<div class="section" id="id1">
+<h2><a class="toc-backref" href="#id4">所需工具</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>要生成 HTML、ePub、PDF 等等这些格式的文档，你需要先安装 Sphinx 和 Sphinx 的 phpdomain
+扩展，并确保你已经安装了 Python 。然后安装 CI Lexer for Pygments ，它可以正确的高亮
+页面中的代码。</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>easy_install <span class="s2">&quot;sphinx==1.2.3&quot;</span>
+easy_install sphinxcontrib-phpdomain
+</pre></div>
+</div>
+<p>然后按照 <tt class="samp docutils literal"><span class="pre">cilexer</span></tt> 目录下的 README 文件的提示，来安装 CI Lexer 。</p>
+</div>
+<div class="section" id="id2">
+<h2><a class="toc-backref" href="#id5">页面标题、小节标题 和 子标题</a><a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>在一个页面中标题可以用于对内容进行排序，将内容分成章节，而且还可以用于自动生成
+页面目录以及整个文档的目录。可以使用特定的某些字符作为下划线来表示标题，主标题
+（例如页面标题和小节标题）还需要使用上划线，其他的标题只需要使用下划线即可。
+层次结构如下:</p>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="c1"># 页面标题（带上划线）</span>
+<span class="o">*</span> <span class="nx">小节标题（带上划线）</span>
+<span class="o">=</span> <span class="nx">子标题</span>
+<span class="o">-</span> <span class="nx">子子标题</span>
+<span class="o">^</span> <span class="nx">子子子标题</span>
+<span class="s2">&quot; 子子子子标题 (!)</span>
+</pre></div>
+</div>
+<p>使用 <a class="reference download internal" href="../_downloads/ELDocs.tmbundle.zip"><tt class="xref download docutils literal"><span class="pre">TextMate</span> <span class="pre">ELDocs</span> <span class="pre">Bundle</span></tt></a> 可以用下面这些 tab
+快捷键快速创建这些标题:</p>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nx">title</span><span class="o">-&gt;</span>
+
+    <span class="c1">##########</span>
+    <span class="nx">Page</span> <span class="nx">Title</span>
+    <span class="c1">##########</span>
+
+<span class="nx">sec</span><span class="o">-&gt;</span>
+
+    <span class="o">*************</span>
+    <span class="nx">Major</span> <span class="nx">Section</span>
+    <span class="o">*************</span>
+
+<span class="nx">sub</span><span class="o">-&gt;</span>
+
+    <span class="na">Subsection</span>
+    <span class="o">==========</span>
+
+<span class="nx">sss</span><span class="o">-&gt;</span>
+
+    <span class="na">SubSubSection</span>
+    <span class="o">-------------</span>
+
+<span class="nx">ssss</span><span class="o">-&gt;</span>
+
+    <span class="na">SubSubSubSection</span>
+    <span class="o">^^^^^^^^^^^^^^^^</span>
+
+<span class="nx">sssss</span><span class="o">-&gt;</span>
+
+    <span class="na">SubSubSubSubSection</span> <span class="p">(</span><span class="o">!</span><span class="p">)</span>
+    <span class="s2">&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2><a class="toc-backref" href="#id6">为方法编写文档</a><a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>当你为其他开发者编写类或方法的文档时，Sphinx 提供了一些指令可以帮你简单快速的完成。
+例如，看下面的 ReST 语法：</p>
+<div class="highlight-rst"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">php:class</span><span class="p">::</span> Some_class
+
+<span class="p">    ..</span> <span class="ow">php:method</span><span class="p">::</span> some_method ( $foo [, $bar [, $bat]])
+
+        This function will perform some action. The <span class="s">``$bar``</span> array must contain
+        a something and something else, and along with <span class="s">``$bat``</span> is an optional
+        parameter.
+
+        <span class="nc">:param int $foo:</span> <span class="nf">the foo id to do something in</span>
+        <span class="nc">:param mixed $bar:</span> <span class="nf">A data array that must contain a something and something else</span>
+        <span class="nc">:param bool $bat:</span> <span class="nf">whether or not to do something</span>
+        <span class="nc">:returns:</span> <span class="nf">FALSE on failure, TRUE if successful</span>
+        <span class="nc">:rtype:</span> <span class="nf">bool</span>
+
+        <span class="se">::</span>
+
+<span class="s">            $this-&gt;load-&gt;library(&#39;some_class&#39;);</span>
+
+<span class="s">            $bar = array(</span>
+<span class="s">                &#39;something&#39;     =&gt; &#39;Here is this parameter!&#39;,</span>
+<span class="s">                &#39;something_else&#39;    =&gt; 42</span>
+<span class="s">            );</span>
+
+<span class="s">            $bat = $this-&gt;some_class-&gt;should_do_something();</span>
+
+<span class="s">            if ($this-&gt;some_class-&gt;some_method(4, $bar, $bat) === FALSE)</span>
+<span class="s">            {</span>
+<span class="s">                show_error(&#39;An Error Occurred Doing Some Method&#39;);</span>
+<span class="s">            }</span>
+
+<span class="p">        ..</span> <span class="ow">note</span><span class="p">::</span> Here is something that you should be aware of when using some_method().
+                For real.
+
+        See also <span class="na">:meth:</span><span class="nv">`Some_class::should_do_something`</span>
+
+
+<span class="p">    ..</span> <span class="ow">php:method</span><span class="p">::</span> should_do_something()
+
+        <span class="nc">:returns:</span> <span class="nf">Whether or not something should be done</span>
+        <span class="nc">:rtype:</span> <span class="nf">bool</span>
+</pre></div>
+</div>
+<p>它生成的文档如下所示：</p>
+<dl class="class">
+<dt id="Some_class">
+<em class="property">class </em><tt class="descname">Some_class</tt><a class="headerlink" href="#Some_class" title="永久链接至目标">¶</a></dt>
+<dd><dl class="method">
+<dt id="Some_class::some_method">
+<tt class="descname">some_method</tt><big>(</big><em>$foo</em><span class="optional">[</span>, <em>$bar</em><span class="optional">[</span>, <em>$bat</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#Some_class::some_method" title="永久链接至目标">¶</a></dt>
+<dd><p>This function will perform some action. The <tt class="docutils literal"><span class="pre">$bar</span></tt> array must contain
+a something and something else, and along with <tt class="docutils literal"><span class="pre">$bat</span></tt> is an optional
+parameter.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first simple">
+<li><strong>$foo</strong> (<em>int</em>) -- the foo id to do something in</li>
+<li><strong>$bar</strong> (<em>mixed</em>) -- A data array that must contain a something and something else</li>
+<li><strong>$bat</strong> (<em>bool</em>) -- whether or not to do something</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回:</th><td class="field-body"><p class="first">FALSE on failure, TRUE if successful</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">返回类型:</th><td class="field-body"><p class="first last">bool</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;some_class&#39;</span><span class="p">);</span>
+
+<span class="nv">$bar</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;something&#39;</span>     <span class="o">=&gt;</span> <span class="s1">&#39;Here is this parameter!&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;something_else&#39;</span>    <span class="o">=&gt;</span> <span class="mi">42</span>
+<span class="p">);</span>
+
+<span class="nv">$bat</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">some_class</span><span class="o">-&gt;</span><span class="na">should_do_something</span><span class="p">();</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">some_class</span><span class="o">-&gt;</span><span class="na">some_method</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="nv">$bar</span><span class="p">,</span> <span class="nv">$bat</span><span class="p">)</span> <span class="o">===</span> <span class="k">FALSE</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nx">show_error</span><span class="p">(</span><span class="s1">&#39;An Error Occurred Doing Some Method&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">Here is something that you should be aware of when using some_method().
+For real.</p>
+</div>
+<p>See also <tt class="xref py py-meth docutils literal"><span class="pre">Some_class::should_do_something()</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Some_class::should_do_something">
+<tt class="descname">should_do_something</tt><big>(</big><big>)</big><a class="headerlink" href="#Some_class::should_do_something" title="永久链接至目标">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">返回:</th><td class="field-body">Whether or not something should be done</td>
+</tr>
+<tr class="field-even field"><th class="field-name">返回类型:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../DCO.html" class="btn btn-neutral float-right" title="Developer&#39;s Certificate of Origin 1.1">下一个主题 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../contributing/index.html" class="btn btn-neutral" title="问题反馈"><span class="fa fa-arrow-circle-left"></span> 上一个主题</a>
+      
+    </div>
+  
+
+  
+  <div id="notes">
+  
+  <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="userguide3/documentation/index" data-title="编写 SmallCircle 的文档" data-url="http://smallcircle.org.cn/user_guide/documentation/index.html"></div>
+  <!-- 多说评论框 end -->
+  
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"smallcircle"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+  <!-- 多说公共JS代码 end -->
+  </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 2014 - 2015, 无穷大软件.
+       最后修改: 2016-04-25.
+    </p>
+  </div>
+
+  
+    <p>
+        <a href="https://github.com/SmallCircle-Chinese/smallcircle-user-guide" target="_blank">Github 简体中文翻译</a>
+        ·
+        <a href="http://smallcircle-chinese.github.io/smallcircle-user-guide/smallcircle_user_guide.zip">离线版压缩包下载</a>
+        ·
+        <a href="http://smallcircle-chinese.github.io/smallcircle-user-guide/SmallCircle.pdf">PDF 版下载</a>
+    </p>
+  
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'3.0.2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+  
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-272152-3', 'auto');
+        ga('send', 'pageview');
+    </script>
+  
+
+</body>
+</html>
